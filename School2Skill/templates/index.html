@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School2Skill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>School2Skill</h1>
+        <nav>
+            <ul>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#volunteering">Volunteering</a></li>
+                <li><a href="#shadowing">Shadowing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" data-aos="fade-in">
+        <h2>Empowering Students Through Real-World Experiences</h2>
+        <p>Discover internships, volunteering, and shadowing opportunities tailored for high school and college students.</p>
+    </section>
+
+    <section id="internships" data-aos="fade-up">
+        <h2>Internships</h2>
+        <p>Explore a variety of internship opportunities to gain practical experience in your field of interest.</p>
+    </section>
+
+    <section id="volunteering" data-aos="fade-up" data-aos-delay="100">
+        <h2>Volunteering</h2>
+        <p>Engage with your community and make a difference through our curated volunteering programs.</p>
+    </section>
+
+    <section id="shadowing" data-aos="fade-up" data-aos-delay="200">
+        <h2>Shadowing</h2>
+        <p>Gain insights into different professions by shadowing experienced professionals.</p>
+    </section>
+
+    <section id="contact" data-aos="fade-up" data-aos-delay="300">
+        <h2>Business Submissions</h2>
+        <form action="/submit" method="post">
+            <input type="text" name="name" placeholder="Business Name" required><br>
+            <input type="email" name="email" placeholder="Contact Email" required><br>
+            <textarea name="message" placeholder="Describe the opportunity" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="donate" data-aos="fade-up" data-aos-delay="400">
+        <h2>Support School2Skill</h2>
+        <p>Your contributions help us provide more opportunities for students.</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Donate via PayPal">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 School2Skill. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

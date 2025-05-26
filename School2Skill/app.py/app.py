@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import smtplib
 from email.mime.text import MIMEText
+import os
 
 app = Flask(__name__)
 
@@ -32,3 +33,7 @@ def submit():
         print("Failed to send email:", e)
 
     return redirect('/')
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
